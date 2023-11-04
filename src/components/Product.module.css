@@ -1,0 +1,60 @@
+.grid-container {
+    display: grid;
+  }
+
+.image-container {
+    position: relative; 
+    transition: filter 1s;
+    transition: filter 1s, background-color 1s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.big-image-section {
+    position: relative;
+    grid-column: span 2; 
+    grid-row: span 2; 
+    transition: filter 1s, background-color 1s;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.image-container:hover, 
+.big-image-section:hover {
+    filter: brightness(0.8); 
+    background-color: rgba(0, 0, 0, 0.4); 
+    border-radius: 2%;
+}
+.dim-image{
+    filter: brightness(0.9);
+}
+.checkbox {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0.5rem;
+    opacity: 0;
+    transition: opacity 1s;
+    transform: scale(1.5);
+}
+
+.image-container:hover .checkbox, /* Show the checkbox on hover */
+.big-image-section:hover .checkbox,
+.checkbox:checked {
+   opacity: 1;
+}
+
+
+.big-image {
+    height: 100%; 
+    width: 100%;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 2%;
+    cursor: grab;
+}
+
+.small-image {
+    width: 100%; /* Ensure small images take the full width of their container */
+    height: 100%;
+    border: 1px solid rgb(184, 184, 184);
+    border-radius: 2%;
+    cursor: grab;
+}
