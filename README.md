@@ -1,3 +1,10 @@
+# About This App:
+This is a simple responsive image gallery using React JS
+with the features of reordering, deleting multiple images, and setting a feature image.
+
+# Live Demo:
+https://ollyo-photo-gallery-project.netlify.app/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
