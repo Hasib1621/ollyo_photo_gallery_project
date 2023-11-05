@@ -36,7 +36,7 @@
     transform: scale(1.5);
 }
 
-.image-container:hover .checkbox, /* Show the checkbox on hover */
+.image-container:hover .checkbox,
 .big-image-section:hover .checkbox,
 .checkbox:checked {
    opacity: 1;
@@ -52,7 +52,7 @@
 }
 
 .small-image {
-    width: 100%; /* Ensure small images take the full width of their container */
+    width: 100%; 
     height: 100%;
     border: 1px solid rgb(184, 184, 184);
     border-radius: 2%;

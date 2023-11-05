@@ -8,15 +8,6 @@ import "./App.css"
 function App() {
   const selectedImages = useSelector((state) => state.images.selectedImages);
   const dispatch = useDispatch();
-  // const sortedImages = IMAGES.sort((a, b) => {
-  //   if (a.order === 1) {
-  //     return -1;
-  //   }
-  //   if (b.order === 1) {
-  //     return 1;
-  //   }
-  //   return a.id - b.id;
-  // });
   const sortedImages = IMAGES.sort((a, b) => a.order - b.order);
 
   const [filteredImages, setFilteredImages] = useState(sortedImages);
@@ -27,15 +18,12 @@ function App() {
     );
     let bigImage = updatedImages.filter((image) => image.status === 1);
     if (bigImage.length === 0 && updatedImages.length > 0) {
-      // console.log(updatedImages[0]);
       updatedImages[0].status = 1;
     }
     setFilteredImages(updatedImages);
     dispatch(unselectImage(selectedImages));
     dispatch(resetSelectedImages());
   };
-
-
   return (
     <>
     {filteredImages.length >= 1 && (

@@ -1,4 +1,3 @@
-// actions/imageReducer.js
 import { createSlice } from '@reduxjs/toolkit';
   
   const imageSlice = createSlice({
@@ -8,15 +7,10 @@ import { createSlice } from '@reduxjs/toolkit';
     },
     reducers: {
       selectImage: (state, action) => {
-        state.selectedImages.push(action.payload);
-        
+        state.selectedImages.push(action.payload); 
       },
       unselectImage: (state, action) => {
         state.selectedImages = state.selectedImages.filter((id) => id !== action.payload);
-      },
-      deleteSelectedImages: (state, action) => {
-        const imageIdsToDelete = action.payload;
-        state.selectedImages = state.selectedImages.filter((id) => !imageIdsToDelete.includes(id));
       },
       resetSelectedImages: (state) => {
         state.selectedImages = [];
@@ -24,7 +18,7 @@ import { createSlice } from '@reduxjs/toolkit';
     },
   });
   
-  export const { selectImage, unselectImage, deleteSelectedImages, resetSelectedImages } = imageSlice.actions;
+  export const { selectImage, unselectImage, resetSelectedImages } = imageSlice.actions;
   export default imageSlice.reducer;
   
 

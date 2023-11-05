@@ -20,7 +20,7 @@ const Product = ({ data, draggable, onDragStart, onDragOver, onDrop }) => {
   return (
     <div
       className={`${data.status === 1 ? classes['big-image-section'] : classes['image-container']} ${selectedImages.includes(data.id) ? classes['dim-image'] : ''}`}
-      draggable={draggable} // Add draggable attribute
+      draggable={draggable} 
       onDragStart={onDragStart}
       onDragOver={onDragOver}
       onDrop={onDrop}
